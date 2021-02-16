@@ -1,7 +1,7 @@
 
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  
+
+
 
 a {
   color: #00b7ff; }
@@ -9,4 +9,15 @@ a {
 h1 {
   color: 15px; }
 
-/*# sourceMappingURL=style.css.map */
+
+  .sign {
+    background-color: magenta;
+  }
+
+  #signUp {
+   height: 600px;
+   width: 600px;
+   display: flex;
+  flex-direction: column;
+  align-items: center; 
+ }
