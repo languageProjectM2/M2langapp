@@ -20,7 +20,7 @@ router.get("/word-search", (req, res, next) => {
   // console.log('REQQQQQQQQQQQQQQ', req.query);
   axios.get(`https://od-api.oxforddictionaries.com/api/v2/translations/en/de/${wordInput || "Error"}?strictMatch=false`)
     .then(def => {
-      // console.log('DEFFFFF', def.data.results[0].lexicalEntries[0]);
+      
       // console.log('DEFFFFF', def.data.results[0].lexicalEntries[0].entries[0].senses[0].translations[0].text);
       const searchedWord = def.data.results[0].id;
       const translatedWord = def.data.results[0].lexicalEntries[0].entries[0].senses[0].translations[0].text
