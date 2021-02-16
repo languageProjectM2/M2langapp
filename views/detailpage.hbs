@@ -1,0 +1,21 @@
+<h1>Word Detailpage</h1>
+
+
+<p>This is the word we want to edit: {{words._id}} </p>
+
+
+
+<form action="/words/{{words._id}}" method="POST">
+
+<p>English: {{this.searchedWord}} </p>
+
+<p>German: {{this.translatedWord}} </p>
+
+<p>English sentence example: {{this.gerSentence}} </p>
+
+<p>German sentence example: {{engSentence}} </p>
+<p>IPA: {{ipaWord}} </p>
+<p>Add your comment here</p>
+<input name="comment" value={{comment}}>
+<button type="submit">Submit</button>
+</form>
