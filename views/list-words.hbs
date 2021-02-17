@@ -4,6 +4,8 @@
 <h3>{{this.searchedWord}}</h3>
 <p>Translation:{{this.translatedWord}}</p>
 {{!-- <p>Example:{{this.gerSentence}}</p> --}}
+<a href="/word-detailpage/{{this._id}}">Edit</a>
+<a href="/words/delete/{{this._id}}">Delete</a>
 <br>
 <br>
 {{/each}}
