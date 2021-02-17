@@ -41,24 +41,46 @@ router.post("/addWord", loginCheck(), (req, res, next) => {
     })
 });
 
-router.get("/word-detailpage", (req, res) => {
-  res.render("detailpage")
-}), 
-
-router.post('/words/edit/:id', (req,res) => {
+router.get("/word-detailpage/:id", (req, res, next) => {
   const wordId = req.params.id;
-  console.log("THIS IS OUR WORD ID", wordId)
   Word.findById(wordId)
   .then(wordsFromDB => {
     console.log("THIS IS OUR CONSOLE LOG",wordsFromDB)
-    res.render('detailpage', {word: wordsFromDB});
+    res.render('detailpage', {words: wordsFromDB});
   })
   .catch(err => {
     next(err);
+  });
+}), 
+
+
+router.post('/words/edit/:id', (req, res, next) => {
+console.log("THIS IS OUR REQ", req.body.comment)
+ const wordId = req.params.id;
+    Word.findByIdAndUpdate(wordId, {
+      comment: req.body.comment,
+    })
+  .then(word => {
+    console.log("THIS IS OUR CONSOLE LOG",word)
+    res.redirect(`/word-detailpage/${word._id}`)
+  })
+  .catch(err => {
+    next(err);
+  }); 
+})
+
+router.get('/words/delete/:id', (req, res, next) => {
+  const wordId = req.params.id;
+  Word.findByIdAndDelete(wordId)
+  .then(()=> {
+      res.redirect("/list-words")
+    })
+  .catch(err => {
+      next(err);
   });
 })
 
 
 
-
 module.exports = router;
+
