@@ -1,19 +1,24 @@
-<div class="text-center mt-5 ">
-  <h1 class="h3 mb-3 font-weight-normal">Sign Up</h2>
-    <form style="max-width:480px;margin:auto;" action="/signup" method="POST">
-      <label class="sr-only" for="username"></label>
-      <input class="form-control" type="text" name="username" placeholder="username" required autofocus>
-      <label class="sr-only" for="password"></label>
-      <input class="form-control" type="password" name="password" placeholder="password" required autofocus>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-      </div>
+<div class="container-lg text-center d-flex justify-content-center mt-5">
+  <div class="card">
+    <div style="width: 30rem; height: 25rem;" class="container-lg mt-2 card-body">
+      <h1 class="h3 mb-3 font-weight-normal">Sign Up</h2>
+        <form style="max-width:480px;margin:auto;" action="/signup" method="POST">
+          <label class="sr-only" for="username"></label>
+          <input class="form-control" type="text" name="username" placeholder="username" required autofocus>
+          <label class="sr-only" for="password"></label>
+          <input class="form-control" type="password" name="password" placeholder="password" required autofocus>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
 
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+          <button id="signBtn" class="w-100 btn btn-lg" type="submit">Sign up</button>
 
-    </form>
+        </form>
+    </div>
+  </div>
+
 </div>
 {{#if message}}
 <p style='color: red'>{{message}}</p>
