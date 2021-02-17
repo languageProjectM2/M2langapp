@@ -55,8 +55,8 @@ router.get("/word-detailpage/:id", (req, res, next) => {
 }), 
 
 
-router.post('/words/edit/:id', (req, res, next) => {
-console.log("THIS IS OUR REQ", req.body.comment)
+router.post('/words/edit/:id', uploader.single(image), (req, res, next) => {
+console.log("THIS IS OUR REQ", req.file)
  const wordId = req.params.id;
     Word.findByIdAndUpdate(wordId, {
       comment: req.body.comment,
