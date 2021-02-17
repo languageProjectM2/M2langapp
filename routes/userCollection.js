@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const axios = require('axios');
 // const process = require('process');
+const { uploader, cloudinary } = require('../config/cloudinary');
 const Word = require('../models/Word')
 const User = require('../models/User.model')
 
