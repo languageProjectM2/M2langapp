@@ -10,9 +10,11 @@ const wordSchema = new Schema({
   engSentence: String,
   ipaWord: String,
   comment: String,
+  imageUrl: String,
+  imagePublicId: String,
   owner: {
     type: Schema.Types.ObjectId,
-    ref: 'User'
+    ref: 'User.model'
   }
 });
 

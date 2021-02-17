@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const axios = require('axios');
 // const process = require('process');
+const { uploader, cloudinary } = require('../config/cloudinary');
 const Word = require('../models/Word')
 const User = require('../models/User.model')
 
@@ -54,11 +55,13 @@ router.get("/word-detailpage/:id", (req, res, next) => {
 }), 
 
 
-router.post('/words/edit/:id', (req, res, next) => {
-console.log("THIS IS OUR REQ", req.body.comment)
+router.post('/words/edit/:id', uploader.single('image'), (req, res, next) => {
+console.log("THIS IS OUR REQ", req.file)
  const wordId = req.params.id;
-    Word.findByIdAndUpdate(wordId, {
+ if (req.file){
+   Word.findByIdAndUpdate(wordId, {
       comment: req.body.comment,
+      imageUrl: req.file.path
     })
   .then(word => {
     console.log("THIS IS OUR CONSOLE LOG",word)
@@ -67,6 +70,19 @@ console.log("THIS IS OUR REQ", req.body.comment)
   .catch(err => {
     next(err);
   }); 
+ }
+else {
+  Word.findByIdAndUpdate(wordId, {
+    comment: req.body.comment,
+  })
+.then(word => {
+  console.log("THIS IS OUR CONSOLE LOG",word)
+  res.redirect(`/word-detailpage/${word._id}`)
+})
+.catch(err => {
+  next(err);
+}); 
+}
 })
 
 router.get('/words/delete/:id', (req, res, next) => {
