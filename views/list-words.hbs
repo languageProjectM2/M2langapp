@@ -1,12 +1,24 @@
-<h1>Your saved words:</h1>
+<div class="card" style="width: 80rem;">
+  {{!-- <img src="..." class="card-img-top" alt="..."> --}}
+  <div class="card-body">
+    <h5 class="card-title">Your saved words:</h5>
+    <p class="card-text">
 
-{{#each words}}
-<h3>{{this.searchedWord}}</h3>
-<p>Translation:{{this.translatedWord}}</p>
-{{!-- <p>Example:{{this.gerSentence}}</p> --}}
-<a href="/word-detailpage/{{this._id}}">Edit</a>
-<a href="/words/delete/{{this._id}}">Delete</a>
-<br>
-<br>
-{{/each}}
 
+
+      {{#each words}}
+    <h3>{{this.searchedWord}}</h3>
+    <p>Translation:{{this.translatedWord}}</p>
+    {{!-- <p>Example:{{this.gerSentence}}</p> --}}
+    <a href="/word-detailpage/{{this._id}}"><button id="signBtn" class="w-20 btn btn-lg mt-5">Edit</button></a>
+    <a href="/words/delete/{{this._id}}"><button id="signBtn" class="w-20 btn btn-lg mt-5">Delete</button></a>
+    <br>
+    <br>
+    {{/each}}
+    </p>
+    <button id="signBtn" type="submit" class="w-20 btn btn-lg mt-5">Save Word</button>
+    <a href="/list-words"> <button id="signBtn" class="w-20 btn btn-lg mt-5">My saved Words</button></a>
+    </form>
+
+  </div>
+</div>

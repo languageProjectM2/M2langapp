@@ -1,24 +1,26 @@
-<h1>Results</h1>
-{{!-- <form action="/word-search" method="GET">
-  <label for="wordInput">Search a word:</label><br>
-  <input type="text" id="wordInput" name="wordInput"><br>
-  <button type="submit">Search</button>
-</form> --}}
+{{!-- <h1>Results</h1> --}}
 
-<form action="/addWord" method="POST">
-<input name="searchedWord" value={{searchedWord}} hidden>
-<p>English: {{searchedWord}} </p>
-<input name="translatedWord" value={{translatedWord}} hidden>
-<p>German: {{translatedWord}} </p>
-<input name="gerSentence" value={{gerSentence}} hidden>
-<p>English sentence example: {{gerSentence}} </p>
-<input name="engSentence" value={{engSentence}} hidden>
-<p>German sentence example: {{engSentence}} </p>
-<input name="ipaWord" value={{ipaWord}} hidden>
-<p>IPA: {{ipaWord}} </p>
 
-<button type="submit">Save Word</button>
+<div class="card" style="width: 18rem;">
+  {{!-- <img src="..." class="card-img-top" alt="..."> --}}
+  <div class="card-body">
+    <h5 class="card-title">Your Word:</h5>
+    <p class="card-text">
+    <form action="/addWord" method="POST">
+      <input name="searchedWord" value={{searchedWord}} hidden>
+      <p>English: {{searchedWord}} </p>
+      <input name="translatedWord" value={{translatedWord}} hidden>
+      <p>German: {{translatedWord}} </p>
+      <input name="gerSentence" value={{gerSentence}} hidden>
+      <p>English sentence example: {{gerSentence}} </p>
+      <input name="engSentence" value={{engSentence}} hidden>
+      <p>German sentence example: {{engSentence}} </p>
+      <input name="ipaWord" value={{ipaWord}} hidden>
+      <p>IPA: {{ipaWord}} </p>
 
-</form>
-<a href="/list-words">my saved words</a>
-<br>
+      <button id="signBtn" type="submit" class="w-100 btn btn-lg mt-5">Save Word</button>
+      <a href="/list-words"> <button id="signBtn" class="w-100 btn btn-lg mt-5">My saved Words</button></a>
+    </form>
+
+  </div>
+</div>
