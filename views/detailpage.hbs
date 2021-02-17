@@ -4,18 +4,18 @@
 
 <form action="/words/edit/{{this._id}}" method="POST">
 
-<p>English: {{this.searchedWord}} </p>
+  <p>English: {{this.searchedWord}} </p>
 
-<p>German: {{this.translatedWord}} </p>
+  <p>German: {{this.translatedWord}} </p>
 
-<p>English sentence example: {{this.gerSentence}} </p>
+  <p>English sentence example: {{this.gerSentence}} </p>
 
-<p>German sentence example: {{this.engSentence}} </p>
-<p>IPA: {{this.ipaWord}} </p>
-<p>Add your comment here</p>
-<textarea name="comment" type="text">{{this.comment}}</textarea>
-<br>
-<button type="submit">Edit Comment</button>
+  <p>German sentence example: {{this.engSentence}} </p>
+  <p>IPA: {{this.ipaWord}} </p>
+  <p>Add your comment here</p>
+  <textarea name="comment" type="text">{{this.comment}}</textarea>
+  <br>
+  <button type="submit">Edit Comment</button>
 </form>
 
 {{/with}}
