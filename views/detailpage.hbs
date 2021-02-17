@@ -10,11 +10,17 @@
   <p>German sentence example: {{this.engSentence}} </p>
   <p>IPA: {{this.ipaWord}} </p>
   <p>Add your comment here</p>
-
+  {{#if this.imageUrl}}
+    <img src="{{this.imageUrl}}" style='width:200px'>
+  {{/if}}
   <input type="file" name="image" />
+  <br>
+  <br>
+  <br>
   <textarea name="comment" type="text">{{this.comment}}</textarea><br>
-  
-  <button type="submit">Edit Comment</button>
+  <br>
+       
+  <button type="submit">Save changes</button>
 
 </form>
 
