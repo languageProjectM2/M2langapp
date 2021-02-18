@@ -2,6 +2,9 @@
 <div class="card mt-5" style="width: 15rem;height: 20rem;">
   <div class="card-body">
 
+ <div id=score>Learning Score: 0 </div>
+
+      {{#each words}}
     <h3>{{this.searchedWord}}</h3>
     <p>Translation:{{this.translatedWord}}</p>
     <p>Translation:{{this.translatedWord}}</p>
@@ -24,6 +27,8 @@
 
 {{!-- <button id="signBtn" type="submit" class="w-20 btn btn-lg mt-5">Save Word</button> --}}
 {{!-- <a href="/list-words"> <button id="signBtn" class="w-20 btn btn-lg mt-5">My saved Words</button></a> --}}
+
+<div id="score">Learning Score: 0 </div>
 
 <div class="d-flex flex-wrap p-5">
   {{#each words}}
@@ -49,3 +54,5 @@
 
   {{/each}}
 </div>
+
+<script src="/js/score.js"></script>

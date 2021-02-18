@@ -4,7 +4,7 @@
 body {
   background-color: 	rgb(153, 204, 255);
   height: 100vh;
- 
+  font-family: 'Roboto', sans-serif;
   
 }
 
@@ -82,3 +82,7 @@ h1 {
 /* #cardContainer {
   background: lightblue;
 } */
+
+#GermanTrans {
+  color:red;
+}
