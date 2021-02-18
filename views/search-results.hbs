@@ -7,15 +7,15 @@
       <h5 class="card-title">Your Word:</h5>
       <p class="card-text">
       <form action="/addWord" method="POST">
-        <input name="searchedWord" value={{searchedWord}} hidden>
+        <input name="searchedWord" value="{{searchedWord}}" hidden>
         <p>English: {{searchedWord}} </p>
-        <input name="translatedWord" value={{translatedWord}} hidden>
+        <input name="translatedWord" value="{{translatedWord}}" hidden>
         <p>German: {{translatedWord}} </p>
-        <input name="gerSentence" value={{gerSentence}} hidden>
+        <input name="gerSentence" value="{{gerSentence}}" hidden>
         <p>English sentence example: {{gerSentence}} </p>
-        <input name="engSentence" value={{engSentence}} hidden>
+        <input name="engSentence" value="{{engSentence}}" hidden>
         <p>German sentence example: {{engSentence}} </p>
-        <input name="ipaWord" value={{ipaWord}} hidden>
+        <input name="ipaWord" value="{{ipaWord}}" hidden>
         <p>IPA: {{ipaWord}} </p>
 
         <button id="signBtn" type="submit" class="w-100 btn btn-lg mt-5">Save Word</button>

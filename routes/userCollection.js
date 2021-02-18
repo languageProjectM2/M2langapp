@@ -32,6 +32,7 @@ router.get('/list-words', (req, res) => {
 
 router.post("/addWord", loginCheck(), (req, res, next) => {
   const {searchedWord, translatedWord, engSentence, gerSentence,ipaWord} = req.body;
+  console.log(req.body)
   Word.create({searchedWord, translatedWord, engSentence, gerSentence,ipaWord, owner: req.session.user._id
   })
     .then((savedWord) => {
