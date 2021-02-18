@@ -6,6 +6,7 @@ body {
   height: 100vh;
   font-family: 'Roboto', sans-serif;
   
+  
 }
 
 /* a {
@@ -108,6 +109,35 @@ h1 {
   background: lightblue;
 } */
 
-#GermanTrans {
-  color:red;
+#picture {
+  size: 400px;
+  position: center;
+}
+
+#containerDetail{
+  background-color: transparent;
+  color: white;
+  border-color: transparent;
+  
+}
+
+#boxDetail{
+  font-family: 'Roboto', sans-serif;
+  border-radius: 25px;
+  background-color:transparent;
+}
+
+#h1Detail {
+  font-family: 'Lora', serif;
+  color: white;
+  text-align: center;
+  margin-top: 1em;
+  size: 4rem;
+
+}
+
+#btnFileUpload{
+  background-color: transparent;
+  color: white;
+  font-family: 'Roboto', sans-serif;
 }
