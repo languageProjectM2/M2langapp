@@ -188,14 +188,12 @@ h1 {
   margin-top: 1em;
   size: 4rem;
 }
-
 #resultContainer{
   background-color: transparent;
   color: white;
   border-radius: 25px;
   border-color: white;
 }
-
 #resultBtn{
   background-color: rgb(255, 198, 93);
   color:#193042;
