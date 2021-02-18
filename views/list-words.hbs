@@ -2,9 +2,9 @@
 <div class="card mt-5" style="width: 15rem;height: 20rem;">
   <div class="card-body">
 
- <div id=score>Learning Score: 0 </div>
+    <div id=score>Learning Score: 0 </div>
 
-      {{#each words}}
+    {{#each words}}
     <h3>{{this.searchedWord}}</h3>
     <p>Translation:{{this.translatedWord}}</p>
     <p>Translation:{{this.translatedWord}}</p>
@@ -47,7 +47,7 @@
 
         <a href="/word-detailpage/{{this._id}}"><button id="signBtn" class="w-20 btn btn-lg">Edit</button></a>
         <a href="/words/delete/{{this._id}}"><button id="signBtn" class="w-20 btn btn-lg">Delete</button></a>
-        <a></a>
+        <button id="correctWord" class="w-20 btn btn-lg">I knew that one</button>
       </div>
     </div>
   </div>
