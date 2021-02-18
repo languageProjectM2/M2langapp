@@ -25,6 +25,7 @@ router.get("/word-search", (req, res, next) => {
       const engSentence = def.data.results[0].lexicalEntries[0].entries[0].senses[0].examples[0].translations[0].text
       const gerSentence = def.data.results[0].lexicalEntries[0].entries[0].senses[0].examples[0].text
       const ipaWord = def.data.results[0].lexicalEntries[0].entries[0].pronunciations[0].phoneticSpelling
+      console.log(searchedWord, translatedWord, gerSentence, engSentence, ipaWord, wordInput)
       res.render("search-results", { searchedWord, translatedWord, gerSentence, engSentence, ipaWord, wordInput });
     })
     .catch(err => {
