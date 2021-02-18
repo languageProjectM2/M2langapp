@@ -1,11 +1,14 @@
 
 
 let score = 0;
-function addScore() {
-  score += 20;
-  let scoreDiv = document.getElementById('score');
-  scoreDiv.innerText = `Score : ${score}`
-}
  
-let cardContainer = document.getElementById('cardContainer');
-cardContainer.addEventListener('mouseover', addScore);
+let btnCorrectWord = document.querySelectorAll('#correctWord');
+for (let i=0; i < cardContainer.length; i++){
+  cardContainer[i].addEventListener('click', ()=>{
+    score += 20;
+    console.log("The score is", score)
+    let scoreDiv = document.getElementById('score');
+    scoreDiv.innerText = `Score : ${score}`
+  });
+}
+
