@@ -2,32 +2,32 @@
 
 
 
+    {{#with words}}
 
-{{#with words}}
+    <form action="/words/edit/{{this._id}}" method="POST" enctype="multipart/form-data">
 
-<form action="/words/edit/{{this._id}}" method="POST" enctype="multipart/form-data">
+      <p>English: {{this.searchedWord}} </p>
 
-  <p>English: {{this.searchedWord}} </p>
+      <p id="GermanTrans">German: {{this.translatedWord}} </p>
+      <p>English sentence example: {{this.gerSentence}} </p>
+      <p>German sentence example: {{this.engSentence}} </p>
+      <p>IPA: {{this.ipaWord}} </p>
+      <p>Add your comment here</p>
+      {{#if this.imageUrl}}
+      <img src="{{this.imageUrl}}" style='width:200px'>
+      {{/if}}
+      <input type="file" name="image" />
+      <br>
+      <br>
+      <br>
+      <textarea name="comment" type="text">{{this.comment}}</textarea><br>
+      <br>
 
-  <p id="GermanTrans">German: {{this.translatedWord}} </p>
-  <p>English sentence example: {{this.gerSentence}} </p>
-  <p>German sentence example: {{this.engSentence}} </p>
-  <p>IPA: {{this.ipaWord}} </p>
-  <p>Add your comment here</p>
-  {{#if this.imageUrl}}
-  <img src="{{this.imageUrl}}" style='width:200px'>
-  {{/if}}
-  <input type="file" name="image" />
-  <br>
-  <br>
-  <br>
-  <textarea name="comment" type="text">{{this.comment}}</textarea><br>
-  <br>
-
-  <button type="submit">Save changes</button>
+      <button type="submit">Save changes</button>
 
 
-</form>
+    </form>
 
-{{/with}}
-
+    {{/with}}
+  </div>
+</div>
