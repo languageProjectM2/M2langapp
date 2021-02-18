@@ -2,7 +2,7 @@
   
 
 body {
-  background-color: 	rgb(153, 204, 255);
+  background-color: #193042;
   height: 100vh;
   font-family: 'Roboto', sans-serif;
   
@@ -16,19 +16,44 @@ h1 {
 
 
  #signBtn {
-   background-color: rgb(254, 95, 85);
+   background-color: #193042;
+   border-color: white;
+   color: white;
+
+
  }
 
  /* #navButton {
    background-color: rgb(91, 182, 222);
  } */
 
- #wholeNavBar {
-  /* background-color: rgb(22, 73, 96); */
+ /* #wholeNavBar {
+ /* background-color: rgb(22, 73, 96);  */
+  /* background: transparent;
+ } */ 
+
+ #navColor {
   background: transparent;
  }
 
- 
+
+#dashContainer {
+  background: transparent;
+  border: none;
+}
+
+#wText {
+  color: white;
+  font-family: 'Lora', serif;
+  font-size: 5em;
+}
+
+#whiteText {
+  color: white;
+  font-family: 'Lora', serif;
+  font-size: 1.5em;
+}
+
 
  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {

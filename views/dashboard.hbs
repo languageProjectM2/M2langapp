@@ -2,16 +2,19 @@
 
 <div class="container d-flex justify-content-center mt-5 text-center">
 
-  <div class="card mt-5" style="width: 18rem;">
+  <div id="dashContainer" class="card mt-5" style="width: 60rem;height: 20rem;">
     {{!-- <img src="..." class="card-img-top" alt="..."> --}}
     <div class="card-body">
-      <h5 class="card-title">Welcome!</h5>
-      <p class="card-text">Lets get Started! Click the link below to make your first card!
+      <h5 id="wText" class="card-title mt-5">Welcome!</h5>
+      <p id="whiteText" class="card-text text-center" style="">Let's get started! Type a word below to
+        create your
+        first card
       </p>
-      <form style="max-width:480px;margin:auto;" action="/word-search" method="GET">
-        <label for="wordInput">English - German</label><br>
-        <input class="form-control" type="text" id="wordInput" name="wordInput"><br>
-        <button id="signBtn" class="w-50 btn btn-lg mt-3" type="submit">Search</button>
+      <form class="" style="max-width:680px;;margin:auto;" action="/word-search" method="GET">
+        <label class="mb-3" id="whiteText" for="wordInput">English - German</label><br>
+        <input class="form-control rounded-pill mt-2" style="height: 3rem; width: 40rem;" type="text" id="wordInput"
+          name="wordInput"><br>
+        <button id="signBtn" class="w-50 btn btn-lg mt-3 rounded-pill" type="submit">Search</button>
       </form>
     </div>
   </div>
