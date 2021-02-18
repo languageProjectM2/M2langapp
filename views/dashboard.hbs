@@ -1,16 +1,15 @@
-<a href="/random-word">random search</a>
+
 
 <div class="container d-flex justify-content-center mt-5 text-center">
 
   <div id="dashContainer" class="card mt-5" style="width: 60rem;height: 20rem;">
     {{!-- <img src="..." class="card-img-top" alt="..."> --}}
     <div class="card-body">
-      <h5 id="wText" class="card-title mt-5">Welcome!</h5>
-      <p id="whiteText" class="card-text text-center" style="">Let's get started! Type a word below to
-        create your
-        first card
+      <h5 id="wText" class="card-title mt-5">Welcome<span id="welcomeBtn">!</span></h5>
+      <p id="whiteText" class="card-text text-center" style="">Create your first Flash Card!
+
       </p>
-      <form class="" style="max-width:680px;;margin:auto;" action="/word-search" method="GET">
+      <form class="justify-content-center" style="max-width:680px;;margin:auto;" action="/word-search" method="GET">
         <label class="mb-3" id="whiteText" for="wordInput">English - German</label><br>
         <input class="form-control rounded-pill mt-2" style="height: 3rem; width: 40rem;" type="text" id="wordInput"
           name="wordInput"><br>
