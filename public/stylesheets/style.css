@@ -182,3 +182,22 @@ h1 {
 }
 
 /*  Selina  */
+
+#h5Result {
+  font-family: 'Lora', serif;
+  color: white;
+  text-align: center;
+  margin-top: 1em;
+  size: 4rem;
+}
+#resultContainer{
+  background-color: transparent;
+  color: white;
+  border-radius: 25px;
+  border-color: white;
+}
+#resultBtn{
+  background-color: rgb(255, 198, 93);
+  color:#193042;
+  font-size:1rem;
+}
