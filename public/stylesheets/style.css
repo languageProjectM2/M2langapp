@@ -6,6 +6,7 @@ body {
   height: 100vh;
   font-family: 'Roboto', sans-serif;
   
+  
 }
 
 
@@ -58,6 +59,11 @@ h1 {
   color: white;
   font-family: 'Lora', serif;
   font-size: 5em;
+  
+}
+
+#welcomeBtn {
+ color: rgb(255, 198, 93);
 }
 
 #whiteText {
@@ -71,8 +77,12 @@ h1 {
   font-size: 1.2em;
 }
 
-.button:hover {
-  color: #013567;
+#fadeBtn {
+  opacity: 70%;
+}
+
+#loginBg {
+  background: transparent;
 }
 
  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -128,10 +138,47 @@ h1 {
 }
 
 
+#wordDay {
+  background-color: rgb(255, 198, 93)
+
+}
+
 /* #cardContainer {
   background: lightblue;
 } */
 
-#GermanTrans {
-  color:red;
+/*  Selina  */
+
+#picture {
+  size: 400px;
+  position: center;
 }
+
+#containerDetail{
+  background-color: transparent;
+  color: white;
+  border-color: transparent;
+  
+}
+
+#boxDetail{
+  font-family: 'Roboto', sans-serif;
+  border-radius: 25px;
+  background-color:transparent;
+}
+
+#h1Detail {
+  font-family: 'Lora', serif;
+  color: white;
+  text-align: center;
+  margin-top: 1em;
+  size: 4rem;
+}
+
+#btnFileUpload{
+  background-color: transparent;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*  Selina  */

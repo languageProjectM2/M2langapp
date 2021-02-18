@@ -1,25 +1,39 @@
-<h1>Word of the day</h1>
 {{!-- <form action="/word-search" method="GET">
   <label for="wordInput">Search a word:</label><br>
   <input type="text" id="wordInput" name="wordInput"><br>
   <button type="submit">Search</button>
 </form> --}}
-<a href="/random-word">Next</a>
+
 ​
-<form action="/addWord" method="POST">
-<input name="searchedWord" value={{searchedWord}} hidden>
-<p>English: {{searchedWord}} </p>
-<input name="translatedWord" value={{translatedWord}} hidden>
-<p>German: {{translatedWord}} </p>
-<input name="gerSentence" value={{gerSentence}} hidden>
-<p>English sentence example: {{gerSentence}} </p>
-<input name="engSentence" value={{engSentence}} hidden>
-<p>German sentence example: {{engSentence}} </p>
-<input name="ipaWord" value={{ipaWord}} hidden>
-<p>IPA: {{ipaWord}} </p>
-​
-<button type="submit">Save Word</button>
-​
-</form>
-<a href="/list-words">my saved words</a>
-<br>
+<div id="wordDay" class="container" style="width: 30rem;">
+  <div id="wordDay" class="card text-center mt-5">
+    <h1>Word of the day</h1>
+    <a href="/random-word">Next</a>
+    <form action="/addWord" method="POST">
+      <input name="searchedWord" value={{searchedWord}} hidden>
+      <p>English: {{searchedWord}} </p>
+      <input name="translatedWord" value={{translatedWord}} hidden>
+      <p>German: {{translatedWord}} </p>
+      <input name="gerSentence" value={{gerSentence}} hidden>
+      <p>English sentence example: {{gerSentence}} </p>
+      <input name="engSentence" value={{engSentence}} hidden>
+      <p>German sentence example: {{engSentence}} </p>
+      <input name="ipaWord" value={{ipaWord}} hidden>
+      <p>IPA: {{ipaWord}} </p>
+      ​
+      <button type="submit">Save Word</button>
+      ​
+    </form>
+    <a href="/list-words">my saved words</a>
+    <br>
+  </div>
+</div>
+
+
+{{!-- <h3 class="mt-2" style="color:#013567"><span style="font-style: italic;">{{this.searchedWord}}</span></h3>
+<p><span style="font-weight: bolder; border:white">Übersetzung:</span><span
+    style="font-style: italic;">{{this.translatedWord}}</span></p>
+<p><span style="font-weight: bolder;">Example:</span><span style="font-style: italic;">{{this.gerSentence}}</span></p>
+<p><span style="font-weight: bolder;">Beispielsatz:</span><span style="font-style: italic;">{{this.engSentence}}</span>
+</p>
+<p><span style="font-weight: bolder;">IPA:</span><span style="font-style: italic;">{{this.ipaWord}}</span></p> --}}
