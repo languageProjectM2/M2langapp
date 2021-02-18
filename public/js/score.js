@@ -8,7 +8,7 @@ for (let i=0; i < cardContainer.length; i++){
     score += 20;
     console.log("The score is", score)
     let scoreDiv = document.getElementById('score');
-    scoreDiv.innerText = `Score : ${score}`
+    scoreDiv.innerText = `Score: ${score}`
   });
 }
 

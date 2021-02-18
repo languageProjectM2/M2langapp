@@ -17,13 +17,22 @@ body {
 h1 {
   color: 15px; }
 
+#scoreWrap{
+  display:flex;
+  justify-content: center;
+}
 
+#score{
+  background-color: #193042;
+   border-color: white;
+   color: white;
+   border-radius: 2rem;
+}
  #signBtn {
    background-color: #193042;
    border-color: white;
    color: white;
-
-
+   
  }
 
  /* #navButton {
@@ -62,13 +71,16 @@ h1 {
   font-size: 1.2em;
 }
 
+.button:hover {
+  color: #013567;
+}
 
  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
-  background-color: transparent;
+  /* background-color: transparent; */
   width: 300px;
   height: 200px;
-  /* border: 1px solid #f1f1f1; */
+  /* border: 1px solid #f1f1f1;  */
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -98,17 +110,21 @@ h1 {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: rgb(163, 204, 245);
-  /* background: transparent; */
-  color: black;
+  /* background-color: rgb(163, 204, 245); */
+  background: transparent;
+  color: white;
+  border: 1px solid #f1f1f1;
+  border-color: white;
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: rgb(163, 204, 245);
+  background-color: rgb(255, 198, 93);
   /* background: transparent; */
-  color: white;
+  color: #013567;
   transform: rotateY(180deg);
+  border: 1px solid #f1f1f1;
+  border-color: white;
 }
 
 
