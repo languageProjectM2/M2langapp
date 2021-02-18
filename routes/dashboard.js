@@ -15,24 +15,34 @@ router.get('/dashboard', (req, res) => {
 })
 
 router.get("/word-search", (req, res, next) => {
-  const {wordInput} = req.query;
-  // const defaultRandomWord = getRandomWord()
-  // console.log('REQQQQQQQQQQQQQQ', req.query);
-  axios.get(`https://od-api.oxforddictionaries.com/api/v2/translations/en/de/${wordInput || "Error"}?strictMatch=false`)
-    .then(def => {
-      
-      // console.log('DEFFFFF', def.data.results[0].lexicalEntries[0].entries[0].senses[0].translations[0].text);
-      const searchedWord = def.data.results[0].id;
-      const translatedWord = def.data.results[0].lexicalEntries[0].entries[0].senses[0].translations[0].text
-      const engSentence = def.data.results[0].lexicalEntries[0].entries[0].senses[0].examples[0].translations[0].text
-      const gerSentence = def.data.results[0].lexicalEntries[0].entries[0].senses[0].examples[0].text
-      const ipaWord = def.data.results[0].lexicalEntries[0].entries[0].pronunciations[0].phoneticSpelling
-      res.render("search-results", { searchedWord, translatedWord, gerSentence, engSentence, ipaWord, wordInput });
+  // console.log("req.session.user: ", req.session.user);
+  axios
+    .get(
+      "https://raw.githubusercontent.com/RazorSh4rk/random-word-api/master/words.json"
+    )
+    .then((response) => {
+      const randomIndex = Math.floor(Math.random() * response.data.length)
+      const randomWord = response.data[randomIndex]
+      //console.log('fuck', response.data)
+      console.log(randomWord)
+      return(randomWord)
+    })
+  axios
+    .get(
+      `https://od-api.oxforddictionaries.com/api/v2/translations/en/de/${randomWord || "Error"}?strictMatch=false`
+      )
+    .then((picked) => {
+      const searchedWord = picked.data.results[0].id;
+      const translatedWord = picked.data.results[0].lexicalEntries[0].entries[0].senses[0].translations[0].text
+      const engSentence = picked.data.results[0].lexicalEntries[0].entries[0].senses[0].examples[0].translations[0].text
+      const gerSentence = picked.data.results[0].lexicalEntries[0].entries[0].senses[0].examples[0].text
+      const ipaWord = picked.data.results[0].lexicalEntries[0].entries[0].pronunciations[0].phoneticSpelling
+      res.render("search-results", { searchedWord, translatedWord, gerSentence, engSentence, ipaWord, randomWord });
     })
     .catch(err => {
       console.log(err);
     })
-});
+  })
 
 // here we will add a shuffling function
 

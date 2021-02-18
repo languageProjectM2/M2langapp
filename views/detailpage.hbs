@@ -7,10 +7,10 @@
 <p>English: {{this.searchedWord}} </p>
 
 <p>German: {{this.translatedWord}} </p>
-
-<p>English sentence example: {{this.gerSentence}} </p>
-
-<p>German sentence example: {{this.engSentence}} </p>
+<input name="gerSentence" value={{gerSentence}} hidden>
+<p>English sentence example: {{gerSentence}} </p>
+<input name="engSentence" value={{engSentence}} hidden>
+<p>German sentence example: {{engSentence}} </p>
 <p>IPA: {{this.ipaWord}} </p>
 <p>Add your comment here</p>
 <textarea name="comment" type="text">{{this.comment}}</textarea>
