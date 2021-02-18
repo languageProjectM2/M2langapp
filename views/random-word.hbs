@@ -1,0 +1,25 @@
+<h1>Word of the day</h1>
+{{!-- <form action="/word-search" method="GET">
+  <label for="wordInput">Search a word:</label><br>
+  <input type="text" id="wordInput" name="wordInput"><br>
+  <button type="submit">Search</button>
+</form> --}}
+<a href="/random-word">Next</a>
+​
+<form action="/addWord" method="POST">
+<input name="searchedWord" value={{searchedWord}} hidden>
+<p>English: {{searchedWord}} </p>
+<input name="translatedWord" value={{translatedWord}} hidden>
+<p>German: {{translatedWord}} </p>
+<input name="gerSentence" value={{gerSentence}} hidden>
+<p>English sentence example: {{gerSentence}} </p>
+<input name="engSentence" value={{engSentence}} hidden>
+<p>German sentence example: {{engSentence}} </p>
+<input name="ipaWord" value={{ipaWord}} hidden>
+<p>IPA: {{ipaWord}} </p>
+​
+<button type="submit">Save Word</button>
+​
+</form>
+<a href="/list-words">my saved words</a>
+<br>
