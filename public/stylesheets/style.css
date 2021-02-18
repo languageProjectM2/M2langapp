@@ -109,6 +109,8 @@ h1 {
   background: lightblue;
 } */
 
+/*  Selina  */
+
 #picture {
   size: 400px;
   position: center;
@@ -133,7 +135,6 @@ h1 {
   text-align: center;
   margin-top: 1em;
   size: 4rem;
-
 }
 
 #btnFileUpload{
@@ -141,3 +142,5 @@ h1 {
   color: white;
   font-family: 'Roboto', sans-serif;
 }
+
+/*  Selina  */
