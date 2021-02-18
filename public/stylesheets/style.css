@@ -8,6 +8,9 @@ body {
   
 }
 
+
+.gradient-vert {
+  background: linear-gradient(to top, #013567 0%, #0195FA 100%); }
 /* a {
   color: #00b7ff; } */
 
