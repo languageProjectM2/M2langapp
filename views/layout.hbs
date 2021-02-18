@@ -22,9 +22,9 @@
 
 
 <body>
-   <nav style="width: 80rem;" id="navColor" class="navbar d-flex justify-content-start">
+   <nav style="width: 100vw;" id="navColor" class="navbar d-flex justify-content-start">
 
-      <div style="width: 40rem;" class=" container d-flex justify-content-start">
+      <div style="width: 40vw;" class=" container d-flex justify-content-start">
          <a href="/random-word"><button id="fadeBtn" class="btn btn-outline-warning me-2" type="button">Word of the
                Day</button></a>
          <a href="/list-words"><button id="fadeBtn" class="btn btn-outline-warning me-2" type="button">Saved
@@ -43,20 +43,21 @@
             <div class="modal-dialog" role="document">
                <div class="modal-content">
                   <div class="modal-header">
-                     <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                     <h5 class="modal-title" id="exampleModalLabel"></h5>
                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                      </button>
                   </div>
                   <div class="modal-body"></div>
-                  <div class="container-lg text-center mt-5">
+                  <div class="container-lg text-center ">
                      <div class="p-3 mb-5 bg-white rounded">
-                        <div style="width: 20rem; height: 10rem;" class="container-lg card-body">
+                        <div style="width: 20rem; height: 15rem;" class="container-lg card-body">
                            <h1 class="h3 mb-3 mt-5 font-weight-normal"></h1>
                            <form style="max-width:480px;margin:auto;" action="/word-search" method="GET">
-                              <label for="wordInput">Search a word:</label><br>
-                              <input class="form-control" type="text" id="wordInput" name="wordInput"><br>
-                              <button id="signBtn" class="w-50 btn btn-lg mt-3" type="submit">Search</button>
+                              <label class="mb-4" for="wordInput">Create a new Card:</label><br>
+                              <input class="form-control rounded-pill" type="text" id="wordInput" name="wordInput"><br>
+                              <button id="signBtn" class="w-50 btn btn-lg mt-3 rounded-pill"
+                                 type="submit">Search</button>
                            </form>
 
                         </div>
@@ -74,9 +75,9 @@
 
 
 
-      <div style="width: 20rem" class="container d-flex justify-content-center">
+      <div style="width: 40vh" class="container d-flex justify-content-end">
 
-
+         {{!--
          <div class="dropdown">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -87,11 +88,9 @@
                <a class="dropdown-item" href="#">German</a>
                <a class="dropdown-item" href="#">Spanish</a>
                <a class="dropdown-item" href="#">French</a>
+            </div> --}}
 
-
-
-            </div>
-            <a href="/logout"><button id="fadeBtn m-3" class="btn btn-outline-warning me-2"
+            <a href="/logout"><button id="fadeBtn m-3 " class="btn btn-outline-warning me-2"
                   type="button">Logout</button></a>
          </div>
       </div>
