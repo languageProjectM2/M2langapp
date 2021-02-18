@@ -1,30 +1,75 @@
-<h1>Word Detailpage</h1>
-
+<h1 id="h1Detail">Customize your card</h1>
 
 
     {{#with words}}
-
+  <div class="container d-flex justify-content-center mt-3 mb-5 text-center">
+    <div id="boxDetail" class="card border border-0.5 border-white p-3 mb-3">
     <form action="/words/edit/{{this._id}}" method="POST" enctype="multipart/form-data">
 
-      <p>English: {{this.searchedWord}} </p>
+      <div class="container d-flex justify-content-center">
+        <div id="containerDetail" class="card text-start m-2" style="width: 15em ;height: 2rem;" >
+       English:
+      </div>
+        <div id="containerDetail" class="card m-2 text-start" style="width: 15rem ;height: 2rem;" >
+          {{this.searchedWord}}
+        </div> 
+      </div>
 
-      <p id="GermanTrans">German: {{this.translatedWord}} </p>
-      <p>English sentence example: {{this.gerSentence}} </p>
-      <p>German sentence example: {{this.engSentence}} </p>
-      <p>IPA: {{this.ipaWord}} </p>
-      <p>Add your comment here</p>
-      {{#if this.imageUrl}}
-      <img src="{{this.imageUrl}}" style='width:200px'>
-      {{/if}}
-      <input type="file" name="image" />
-      <br>
-      <br>
-      <br>
-      <textarea name="comment" type="text">{{this.comment}}</textarea><br>
+       <div class="container d-flex justify-content-center">
+        <div id="containerDetail" class="card text-start m-2" style="width: 15em ;height: 2rem;" >
+         German:
+      </div>
+        <div id="containerDetail" class="card m-2 text-start" style="width: 15rem ;height: 2rem;" >
+          {{this.translatedWord}}
+        </div> 
+      </div>
+
+        <div class="container d-flex justify-content-center">
+        <div id="containerDetail" class="card text-start m-2" style="width: 15em ;height: 2rem;" >
+         German example:
+      </div>
+        <div id="containerDetail" class="card m-2 text-start" style="width: 15rem ;height: 2rem;" >
+          {{this.gerSentence}} 
+        </div> 
+      </div>
+
+     <div class="container d-flex justify-content-center">
+        <div id="containerDetail" class="card text-start m-2" style="width: 15em ;height: 2rem;" >
+         German example:
+      </div>
+        <div id="containerDetail" class="card m-2 text-start" style="width: 15rem ;height: 2rem;" >
+          {{this.engSentence}}
+        </div> 
+      </div>
+
+      
+     <div class="container d-flex justify-content-center">
+        <div id="containerDetail" class="card text-start m-2" style="width: 15em ;height: 2rem;" >
+         IPA:
+      </div>
+        <div id="containerDetail" class="card m-2 text-start" style="width: 15rem ;height: 2rem;" >
+          {{this.ipaWord}} 
+        </div> 
+      </div>
+
+      <div class="container d-flex flex-column justify-content-center">
+          
+        {{#if this.imageUrl}}
+          <img class="img-fluid img-responsive no-padding mb-2" id="picture"src="{{this.imageUrl}}" style='width:20rem'>
+        {{/if}}
+          
+          <input id="btnFileUpload" type="file" name="image" />  
+          
+      </div>
       <br>
 
-      <button type="submit">Save changes</button>
+      <div class="container d-flex flex-column" style="width: 35rem; height: 13rem">
+          <div id="containerDetail" class="card text-start m-1"> Add your comment here: </div>
+          <textarea style="width: 100% ;height: 100%;" name="comment" type="text">{{this.comment}}</textarea>
+      </div>
 
+      <button id="signBtn" class="w-45 btn btn-lg mt-3 rounded-pill"
+ type="submit">Save changes</button>
 
     </form>
 
