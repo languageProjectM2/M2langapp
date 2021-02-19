@@ -1,5 +1,3 @@
-
-
 <div class="container d-flex justify-content-center mt-5 text-center">
 
   <div id="dashContainer" class="card mt-5" style="width: 60rem;height: 20rem;">
@@ -10,10 +8,26 @@
 
       </p>
       <form class="justify-content-center" style="max-width:680px;;margin:auto;" action="/word-search" method="GET">
-        <label class="mb-3" id="whiteText" for="wordInput">English - German</label><br>
-        <input class="form-control rounded-pill mt-2" style="height: 3rem; width: 40rem;" type="text" id="wordInput"
-          name="wordInput"><br>
-        <button id="signBtn" class="w-50 btn btn-lg mt-3 rounded-pill" type="submit">Search</button>
+        <label class="mb-3" id="whiteText" for="wordInput">
+          {{!-- English - German --}}
+
+          <div class="dropdown mb-4">
+            <a class="btn btn-secondary dropdown-toggle dropBtn rounded-pill" href="#" role="button"
+              id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              English - German
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">English - German </a>
+              <a class="dropdown-item" href="#">English - Spanish</a>
+              <a class="dropdown-item" href="#">English - French</a>
+            </div>
+
+
+        </label><br>
+        <input class="form-control rounded-pill mt-2 mt-4" style="height: 2.5rem; width: 40rem;" type="text"
+          id="wordInput" name="wordInput"><br>
+        <button id="signBtn" class="w-50 btn btn-sml mt-3 rounded-pill mb-5" type="submit">Search</button>
       </form>
     </div>
   </div>

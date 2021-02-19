@@ -77,9 +77,9 @@ h1 {
   font-size: 1.2em;
 }
 
-#fadeBtn {
+/* #fadeBtn {
   opacity: 70%;
-}
+} */
 
 #loginBg {
   background: transparent;
@@ -181,22 +181,48 @@ h1 {
   font-family: 'Roboto', sans-serif;
 }
 
+.knowBtn {
+  background-color: #193042;
+}
+/*  Selina  */
+
+
+.dropBtn {
+  background-color: #193042;
+}
+
 #h5Result {
+  
+    font-family: 'Lora', serif;
+    color: white;
+    text-align: center;
+    margin-top: 1em;
+    size: 4rem;
+}
+#paraGraph {
   font-family: 'Lora', serif;
   color: white;
   text-align: center;
   margin-top: 1em;
-  size: 4rem;
+  font-size: 1.2em;
 }
+
 #resultContainer{
   background-color: transparent;
   color: white;
   border-radius: 25px;
   border-color: white;
 }
+
 #resultBtn{
   background-color: rgb(255, 198, 93);
   color:#193042;
-  font-size:1rem;
+  font-size: 1rem;
+
 }
 /*  Selina  */
+
+#titleText {
+  font-family: 'Lora', serif;
+   
+}

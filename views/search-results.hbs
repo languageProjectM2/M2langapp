@@ -3,24 +3,29 @@
 <h2 id="h5Result" class="card-title">Your Word</h2>
 
 <div class="container d-flex justify-content-center p-4">
-  <div id="resultContainer" class="card" style="width: 19rem; height: 23rem">
+  <div id="resultContainer" class="card" style="width: 19rem; height: 26rem">
     {{!-- <img src="..." class="card-img-top" alt="..."> --}}
     <div class="card-body">
-        <p class="card-text">
+      <p class="card-text">
       <form action="/addWord" method="POST">
         <input name="searchedWord" value="{{searchedWord}}" hidden>
-        <p><span style="font-weight: bolder; border:white">English:  </span><span style="font-style: italic;">{{searchedWord}}</span> </p>
+        <p><span style="font-weight: bolder; border:white">English: </span><span
+            style="font-style: italic;">{{searchedWord}}</span> </p>
         <input name="translatedWord" value="{{translatedWord}}" hidden>
-        <p><span style="font-weight: bolder; border:white">German:  </span><span style="font-style: italic;">{{translatedWord}}</span></p>
+        <p><span style="font-weight: bolder; border:white">German: </span><span
+            style="font-style: italic;">{{translatedWord}}</span></p>
         <input name="gerSentence" value="{{gerSentence}}" hidden>
-        <p><span style="font-weight: bolder; border:white">English sentence example: </span><br><span style="font-style: italic;">{{gerSentence}}</span> </p>
+        <p><span style="font-weight: bolder; border:white">English sentence example: </span><br><span
+            style="font-style: italic;">{{gerSentence}}</span> </p>
         <input name="engSentence" value="{{engSentence}}" hidden>
-        <p><span style="font-weight: bolder; border:white">German sentence example: </span><br><span style="font-style: italic;">{{engSentence}}</span> </p>
+        <p><span style="font-weight: bolder; border:white">German sentence example: </span><br><span
+            style="font-style: italic;">{{engSentence}}</span> </p>
         <input name="ipaWord" value="{{ipaWord}}" hidden>
         <p><span style="font-weight: bolder; border:white">IPA </span> {{ipaWord}} </p>
         <div class="d-flex justify-content-center">
-        <button id="resultBtn" class="w-35 btn btn-lg mt-3 rounded-pill" type="submit">Save Word</button>
-        {{!-- <a href="/list-words"> <button id="signBtn" class="w-100 btn btn-lg mt-5">My saved Words</button></a> --}}
+          <button id="resultBtn" class="w-35 btn btn-lg mt-3 rounded-pill" type="submit">Save Word</button>
+          {{!-- <a href="/list-words"> <button id="signBtn" class="w-100 btn btn-lg mt-5">My saved Words</button></a>
+          --}}
         </div>
       </form>
 
