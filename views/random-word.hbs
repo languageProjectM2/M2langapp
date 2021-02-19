@@ -5,29 +5,65 @@
 </form> --}}
 
 ​
-<div id="wordDay" class="container" style="width: 30rem;">
-  <div id="wordDay" class="card text-center mt-5">
-    <h1>Word of the day</h1>
-    <a href="/random-word">Next</a>
-    <form action="/addWord" method="POST">
-      <input name="searchedWord" value={{searchedWord}} hidden>
-      <p>English: {{searchedWord}} </p>
-      <input name="translatedWord" value={{translatedWord}} hidden>
-      <p>German: {{translatedWord}} </p>
-      <input name="gerSentence" value={{gerSentence}} hidden>
-      <p>English sentence example: {{gerSentence}} </p>
-      <input name="engSentence" value={{engSentence}} hidden>
-      <p>German sentence example: {{engSentence}} </p>
-      <input name="ipaWord" value={{ipaWord}} hidden>
-      <p>IPA: {{ipaWord}} </p>
+
+
+<h2 id="h5Result" class="card-title">Word of the Day</h2>
+​
+<div class="container d-flex justify-content-center p-3">
+  <div id="resultContainer" class="card" style="width: 19rem; height:26rem">
+    {{!-- <img src="..." class="card-img-top" alt="..."> --}}
+    <div class="card-body">
+      <p class="card-text">
+      <form action="/addWord" method="POST">
+        <input name="searchedWord" value="{{searchedWord}}" hidden>
+        <p><span style="font-weight: bolder; border:white">English: </span><span
+            style="font-style: italic;">{{searchedWord}}</span> </p>
+        <input name="translatedWord" value="{{translatedWord}}" hidden>
+        <p><span style="font-weight: bolder; border:white">German: </span><span
+            style="font-style: italic;">{{translatedWord}}</span></p>
+        <input name="gerSentence" value="{{gerSentence}}" hidden>
+        <p><span style="font-weight: bolder; border:white">English sentence example: </span><br><span
+            style="font-style: italic;">{{gerSentence}}</span> </p>
+        <input name="engSentence" value="{{engSentence}}" hidden>
+        <p><span style="font-weight: bolder; border:white">German sentence example: </span><br><span
+            style="font-style: italic;">{{engSentence}}</span> </p>
+        <input name="ipaWord" value="{{ipaWord}}" hidden>
+        <p><span style="font-weight: bolder; border:white">IPA </span> {{ipaWord}} </p>
+        <div class="d-flex justify-content-center">
+          <button id="resultBtn" class="w-35 btn btn-lg mt-3 rounded-pill" type="submit">Save Word</button>
+          {{!-- <a href="/list-words"> <button id="signBtn" class="w-100 btn btn-lg mt-5">My saved Words</button></a>
+          --}}
+        </div>
+      </form>
       ​
-      <button type="submit">Save Word</button>
-      ​
+    </div>
+  </div>
+</div>
+{{!-- <div id="wordDay" class="container" style="width: 30rem; border-radius:2rem">
+  <div id="wordDay" style="border-radius:2rem" class=" card text-center mt-5">
+    <h1 style="color:#013567">Word of the day</h1>
+    <a class="noStyle" href="/random-word">Next</a>
+    <form action="/addWord" method="POST"></form>
+    <input name="searchedWord" value="{{searchedWord}}" hidden>
+    {{!-- <p>English: {{searchedWord}} </p>
+    <h4 class="mt-2" style="color:#013567">English: <span style="font-style:italic">{{this.searchedWord}}</span></h4>
+    {{!-- <input name="translatedWord" value="{{translatedWord}}" hidden>
+    {{!-- <h4 class="mt-2" style="color:#013567">Deutsch: <span style="font-style:italic">{{translatedWord}}</span></h4>
+    <input name="gerSentence" value="{{gerSentence}}" hidden>
+    <h6 class="mt-2" style="color:#013567">English Example: <span style="font-style:italic">{{gerSentence}}</span></h6>
+    <input name="engSentence" value="{{engSentence}}" hidden>
+    <h6 class="mt-2" style="color:#013567">deutsches Beispielsatz: <span style="font-style:italic"> {{engSentence}}
+    </h6>
+    <input name="ipaWord" value="{{ipaWord}}" hidden>
+    <p>IPA: {{ipaWord}} </p>
+    ​
+    <button class="w-20 btn btn-lg rounded-pill" type="submit">Save Word</button>
+    ​
     </form>
     <a href="/list-words">my saved words</a>
     <br>
   </div>
-</div>
+</div> --}}
 
 
 {{!-- <h3 class="mt-2" style="color:#013567"><span style="font-style: italic;">{{this.searchedWord}}</span></h3>
